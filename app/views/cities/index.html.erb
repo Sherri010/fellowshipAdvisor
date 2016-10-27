@@ -1,9 +1,12 @@
 <h1>Middle Earth</h1>
+<%= link_to "Add Realm",  'cities/new' %>
 <% @cities.each do |city| %>
   <div class="col-md-6">
 <a href="<%=city_path(city)%>">
   <%= image_tag(city.picture, :class => "img-size" ) %>
   <h3><%= link_to city.name, city_path(city) %></h3>
+  <%= link_to "Edit city",  edit_city_path(city.id) %> -
+  <%= link_to "Delete city", delete_city_path(city.id),method:"delete" %>
 </a>
 </div>
 

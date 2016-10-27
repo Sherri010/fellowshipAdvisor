@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   root to: 'cities#index'
 
   get '/cities', to: 'cities#index', as: 'cities'
+  get '/cities/new', to: 'cities#new' , as: 'new_city'
   get '/cities/:id', to: 'cities#show', as: 'city'
+  post '/cities', to:'cities#create', as:'add_city'
+  patch '/citie/:id', to: 'cities#update', as:'update_city'
+  delete '/cities/:id', to: 'cities#destroy', as:'delete_city'
 
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'

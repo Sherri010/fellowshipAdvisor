@@ -5,7 +5,7 @@ class User < ApplicationRecord
     friendly_id :name, use: :slugged
 
   has_many :post_users, dependent: :destroy
-  has_many :posts, through: :post_users
+  has_many :posts
   has_many :comments
 
   validates :email, uniqueness: true

@@ -1,5 +1,5 @@
 body {
-  background-color: #5D613E;
+  background-color: #37474f ;
 }
 
 nav {
@@ -20,11 +20,13 @@ nav {
   color: #ffbf00;
   border: none;
 }
-
-#banner {
-  width: 100%;
-  display: block;
-  margin: auto;
+.intro{
+  width:99vw;
+  height: calc(100vh - 50px);
+  background:url("http://i.imgur.com/dDznL1V.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #middle-earth {

@@ -1,8 +1,10 @@
-<img id="banner" src="http://i.imgur.com/dDznL1V.png">
+<div class="intro">
+<!-- <img id="banner" src="http://i.imgur.com/dDznL1V.png"> -->
+</div>
 <div class="cities-wrap">
   <% @cities.each do |city| %>
 
-  <style>
+  <!-- /*<style>
   .city-image {
     display: block;
     width: 100%;
@@ -35,7 +37,7 @@
   .ShelobsLair {
     margin: 30px auto !important;
   }
-  </style>
+  </style>*/ -->
 
 
   <a href='<%=city_path(city.id)%>' class="city-image <%=city.name.delete(" '")%>">
@@ -44,9 +46,7 @@
 
   </a>
 
-      <%= link_to "Delete Realm", delete_city_path(city.id),method:"delete", class: "btn btn-danger" %>
 
-      <%= link_to "Edit Realm",  edit_city_path(city.id), class: "btn btn-primary" %>
 
   <% end %>
 </div>

@@ -92,7 +92,7 @@ h6 {
 }
 
 .wrap {
-	max-width: 1140px;
+	/*max-width: 1140px;*/
 	min-height: 100vh;
 	padding: 0;
 	margin: 0 auto;

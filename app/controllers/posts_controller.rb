@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
    before_action :authenticate
-
-
+   before_action :set_post, only:[:show,:edit,:update,:destroy]
+   before_action :require_owner!,only:[:edit,:update,:destroy]
 
   def index
     @posts = User.friendly.find(current_user.id).posts
@@ -36,18 +36,15 @@ class PostsController < ApplicationController
 
   def show
     @user = User.friendly.find(current_user.id)
-    @post = Post.find(params[:id])
     @city = City.friendly.find(get_city(params[:id]))
     @comments = Comment.where(post_id: params[:id])
     @comment_new = Comment.new
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     @post.update_attributes(post_params)
     redirect_to user_path(current_user.id)
   end
@@ -63,5 +60,11 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :content)
   end
+  def set_post
+     @post = Post.find(params[:id])
+  end
 
+  def require_owner!
+    redirect_to(:root, status: 401) if @post.user != current_user
+  end
 end

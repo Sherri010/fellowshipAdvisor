@@ -1,0 +1,51 @@
+
+model method:
+
+def is_user(other_user)
+ self == other_user
+ end
+
+
+View Helper:
+
+def is?(user)
+  user == current_user
+end
+
+to find owner of a post:
+
+
+-generate custome slug
+def gen_custome_slug
+ "#{name}-#{lastname}"
+ end
+
+
+
+in Post model:
+ belongs_to :user
+def owner
+ user # which is the same as self.user
+ end
+
+so in the controller instead of having to look for the owner by id, you can just call .owner
+
+better solution:
+
+ belongs_to :user
+ alias_method :owner, :user
+
+ - when havi
+ ng two views put into one file, you need to use partials instead of having both coded into one file
+ -rails egar loading
+ -shallow routes
+ - in routes:
+     collection do
+     end
+
+
+---
+hiding the button only, is not a way to prevent user from deleting your resources. they need be authenticated in controller as well.
+by hitting that route with the right verb you can delete it
+
+you can use '!' after method name to indicate this method has dengarous consiquences like if a condition is not true,it will redirect.

@@ -13,6 +13,7 @@ nav {
   padding: 15px 0;
   border: none;
   border-radius: 0;
+  margin-bottom:0px;
 }
 
 .navbar-inverse .navbar-brand {
@@ -23,7 +24,12 @@ nav {
 .intro{
   width:99vw;
   height: calc(100vh - 50px);
-  background:url("http://i.imgur.com/dDznL1V.png");
+  background:linear-gradient(
+      rgba(55, 71, 79, 0),
+      rgba(55, 71, 79, 0),
+      rgba(55, 71, 79, 0),
+      rgba(55, 71, 79, 1)
+    ),url("http://i.imgur.com/dDznL1V.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

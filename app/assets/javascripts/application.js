@@ -34,10 +34,3 @@ $(function(){
      });
  });
 
- $('.img-size').mouseover(function() {
-   $('.text').css("visibility","visible");
- });
-
- $('.img-size').mouseout(function() {
-   $('.text').css("visibility","hidden");
- });

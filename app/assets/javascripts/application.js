@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 $(document).ready(function(){
-  // $("#banner").delay(800).show(700);
   $(".new-pos").on("click",function(event){
       $(".modal").modal();
     });

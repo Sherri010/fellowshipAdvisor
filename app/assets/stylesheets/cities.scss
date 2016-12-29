@@ -82,28 +82,43 @@ float-fix {
 }
 
 .city-show-image-container {
-	width: 100%;
+	width:80%;
 	max-height: 500px;
-	margin: 0 0 80px;
+  display: block;
+  margin: 0 auto;
 	overflow: hidden;
-
+  padding:50px;
 }
 
 .city-show-image {
 	background-size: cover;
 	width: 100%;
 	height: auto;
-	margin: 0 0 80px;
+
 }
 
+.city-show-posts{
+  width:40%;
+  margin:0 auto;
+  padding:50px;
+}
 .city-name {
-	float: left;
+  text-align: center;
+  color:#fff;
+  font-family: 'Jim Nightshade', cursive;
+  font-size:48px;
+  margin:20px;
 }
-
-.new-post {
-	float: right;
+.new-post{
+margin:10px 20px;
 }
-
+.profile-image-small{
+  border-radius: 5px;
+}
+.commenter{
+  padding-left:20px;
+  font-weight: bold;
+}
 .user-profile-section-small {
 	max-width: 80px;
 	font-size: 18px;
@@ -111,7 +126,12 @@ float-fix {
 	margin: 0 30px 0 0;
 	float: left;
 }
-
+.post-content{
+  display: inline;
+}
+.bold-name{
+  font-weight: bold;
+}
 .user-post-section-wide {
 	min-width: 70%;
 	padding: 0;

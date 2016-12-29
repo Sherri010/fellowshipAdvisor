@@ -182,3 +182,16 @@ footer {
 	margin: 60px 0 0;
 	word-spacing: 5px;
 }
+/* Media queries
+**************************************************/
+@media (max-width: 600px) {
+	.container{
+		width:auto;
+	}
+	.intro{
+	   display: none;
+	}
+	.instruction{
+	    padding:80px 30px;
+	}
+}

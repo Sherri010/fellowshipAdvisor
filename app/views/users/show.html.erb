@@ -1,7 +1,8 @@
 <div class="container user-histroy">
 
   <!-- Start User Profile Section -->
-  <section class="user-profile-section">
+  <div class="row">
+  <div id="user-profile-section" class="col-md-3">
 		<%= image_tag(@user.picture, :class => "profile-image") %>
 
 		<h2><%= @user.name %></h2>
@@ -11,11 +12,11 @@
 		<p>Joined: <%= @user.created_at.strftime("%d %b. %Y") %></p>
 
 		<%= link_to "Edit Profile", edit_user_path(@user.id), class: "edit-profile-button" %>
-	</section>
+	</div>
 
 
   <!-- Start User Post Section -->
-  <section class="user-post-section">
+  <div class="user-post-section col-offset-1 col-md-8">
 	  <h2>Your history</h2>
 		<div class="user-post-block">
 			<% @posts.each do |post| %>
@@ -28,6 +29,7 @@
 		</div>
 
 		<% end %>
-	</section>
-
+	</div>
+</div>
+</div>
 </div>

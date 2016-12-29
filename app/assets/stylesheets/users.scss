@@ -4,20 +4,22 @@
 
 
 .user-histroy{
-  color:#fff;
+  margin-top:50px;
 }
 .user-post-section h2 {
   text-align: center;
   color:#ffbf00;
   font-family: 'Jim Nightshade', cursive;
   font-size: 50px;
-  width:80%;
+  clear:both;
 }
 
+#user-profile-section{
+  color:#fff;
+}
 .user-post-block {
   width: 100%;
-  padding: 0;
-  margin: 0 0 30px;
+  padding: 0
 }
 
 h3.user-post-title {

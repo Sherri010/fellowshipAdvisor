@@ -5,12 +5,12 @@ body {
 nav {
   font-family: 'Jim Nightshade', cursive;
   font-size: 24px;
+  padding: 20px 50px;
 }
 
 .navbar-inverse {
   background-color: #222;
   width: 100%;
-  padding: 15px 0;
   border: none;
   border-radius: 0;
   margin-bottom:0px;
@@ -120,6 +120,21 @@ float-fix {
   font-size:48px;
   margin:20px;
 }
+
+.city-title-overlay {
+	visibility: hidden;
+  display: block;
+}
+.city-image:hover .city-title-overlay {
+	visibility: visible;
+	font-family: 'Jim Nightshade', cursive;
+	font-size: 86px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none !important;
+	padding-top:210px;
+}
+
 .new-post{
 margin:10px 20px;
 }

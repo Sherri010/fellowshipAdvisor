@@ -166,7 +166,13 @@ a.city-image {
 	box-shadow: -1px 0px 23px -3px rgba(0,0,0,0.75);
 }
 
-
+/*proifle imgs
+**********************************************/
+.profile-image{
+	-webkit-box-shadow: -1px 0px 23px -3px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 0px 23px -3px rgba(0,0,0,0.75);
+	box-shadow: -1px 0px 23px -3px rgba(0,0,0,0.75);
+}
 /* Footer
 **********************************************/
 

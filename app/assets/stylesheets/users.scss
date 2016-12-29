@@ -18,8 +18,8 @@
   color:#fff;
 }
 .user-post-block {
-  width: 100%;
-  padding: 0
+  width: 60%;
+  padding: 30px;
 }
 
 h3.user-post-title {
@@ -29,4 +29,7 @@ h3.user-post-title {
 a.edit-post-button{
 	color:#fff;
 	text-decoration: none;
+}
+.controllers{
+  float:right;
 }

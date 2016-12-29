@@ -24,7 +24,6 @@
 
         <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-          <li><%= link_to "Add Realm",  '/cities/new' %></li>
           <li><%= link_to "Profile", user_path(current_user) %></li>
           <li><%= link_to "Log Out", logout_path %></li>
           <% else %>

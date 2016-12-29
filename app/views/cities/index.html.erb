@@ -1,7 +1,8 @@
 <div class="intro">
 </div>
 <div class="cities-wrap">
-
+<div class="container">
+  <h2 class="instruction"> Pick a realm and discover all the stories...</h2>
     <div class="row">
 
   <% @cities.each do |city| %>
@@ -15,11 +16,13 @@
     cursor: pointer;
   }
   </style>
+  <div class="col-md-4 city">
       <a href='<%=city_path(city.id)%>' class=" city-image thumbnail <%=city.name.delete(" '")%>">
         <p class="city-title-overlay"><%= city.name %></p>
       </a>
-
+  </div>
 
   <% end %>
+</div>
 </div>
 </div>

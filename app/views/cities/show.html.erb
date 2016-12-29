@@ -1,6 +1,8 @@
 <div>
 	<h1 class="city-name"><%= @city.name %></h1>
-	<a href="#"  data-toggle="modal" data-target="#new-post-modal" class="btn btn-primary new-post">Add New Post</a>
+	  <% if current_user %>
+	      <a href="#"  data-toggle="modal" data-target="#new-post-modal" class="btn btn-primary new-post">Add New Post</a>
+   <% end %>
 </div>
 <div class="city-show-image-container">
 	<%= image_tag(@city.picture, class: "city-show-image")%>

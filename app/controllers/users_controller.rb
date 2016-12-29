@@ -2,6 +2,7 @@ class UsersController < ApplicationController
      before_action :authenticate , only: [:show, :edit,:update]
      before_action :set_user, only: [:show, :edit, :update]
      before_action :authorize!, only: [:show, :edit, :update]
+     after_filter :allow_iframe
   def new
     @user = User.new
   end

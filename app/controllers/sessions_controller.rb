@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  after_filter :allow_iframe
   def new
     @user = User.new
   end

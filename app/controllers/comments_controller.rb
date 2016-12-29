@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-
+after_filter :allow_iframe
 
   def new
     @comment = Comment.new

@@ -1,5 +1,5 @@
 class CitiesController < ApplicationController
-
+after_filter :allow_iframe
   def index
     @cities = City.all
   end

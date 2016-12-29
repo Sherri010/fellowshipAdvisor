@@ -2,7 +2,7 @@ class PostsController < ApplicationController
    before_action :authenticate
    before_action :set_post, only:[:show,:edit,:update,:destroy]
    before_action :require_owner!,only:[:edit,:update,:destroy]
-
+   after_filter :allow_iframe
   def index
     @posts = User.friendly.find(current_user.id).posts
   end

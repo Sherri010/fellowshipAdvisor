@@ -3,10 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+.user-histroy{
+  color:#fff;
+}
 .user-post-section h2 {
-  padding: 0;
-  margin: 0;
+  text-align: center;
+  color:#ffbf00;
+  font-family: 'Jim Nightshade', cursive;
+  font-size: 50px;
+  width:80%;
 }
 
 .user-post-block {
@@ -15,6 +20,11 @@
   margin: 0 0 30px;
 }
 
-.user-post-title {
-	font-size: 46px;
+h3.user-post-title {
+	font-size: 36px;
+  font-family: sans-serif;
+}
+a.edit-post-button{
+	color:#fff;
+	text-decoration: none;
 }

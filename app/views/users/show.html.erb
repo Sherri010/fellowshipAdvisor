@@ -1,4 +1,4 @@
-<div class="float-fix">
+<div class="container user-histroy">
 
   <!-- Start User Profile Section -->
   <section class="user-profile-section">
@@ -16,10 +16,10 @@
 
   <!-- Start User Post Section -->
   <section class="user-post-section">
-	<h2>Posts</h2>
+	  <h2>Your history</h2>
 		<div class="user-post-block">
 			<% @posts.each do |post| %>
-			 <h3 class="user-post-title"><%= link_to post.title, show_post_path(@user.id, post.id) %></h3>
+			 <h4 class="user-post-title"><%= link_to post.title, show_post_path(@user.id, post.id), class: "user-post-title" %></h4>
 			 <p><%= post.content %></p>
 
 			<%= link_to "Delete Post", delete_post_path(get_city(post.id), post.id), data: { confirm: 'Are you sure you want to delete "' + post.title + '"' }, method: :delete, class: "btn btn-danger" %>

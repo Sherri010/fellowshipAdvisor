@@ -25,7 +25,7 @@ input {
  	margin: 0 0 15px;
  }
 
-.edit-profile-button,
+
 .edit-post-button,
 .btn-secondary,
 .btn-primary {
@@ -44,7 +44,7 @@ input {
   cursor: pointer;
 }
 
-.edit-profile-button:hover,
+
 .edit-post-button:hover,
 .btn-secondary:hover,
 .btn-primary:hover {
@@ -72,11 +72,9 @@ input {
 
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
-	color: #222;
 	padding: 0;
 	margin: 0 0 15px;
 }

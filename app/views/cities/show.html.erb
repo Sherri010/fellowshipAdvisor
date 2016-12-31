@@ -11,32 +11,33 @@
 <div class="city-show-posts">
 	<%@posts.each do |post| %>
 		<div class="container-gray float-fix">
-			<section class="user-profile-section-small">
-				<%= image_tag(get_user(post.user_id).picture, class: "profile-image-small") %>
-			</section>
-
-			<section class="user-post-section-wide">
-				<h2><%= link_to post.title, city_post_path(@city, post.id)  %></h2>
-			  <span class="post-content"><span class="bold-name"><%=(get_user(post.user_id)).name %>: </span><%= post.content %></span>
-				<% comments = get_comments(post.id) %>
-				<% comments.each do |comment| %>
-					<div class="comment-content-wide">
-						<p class="comment">
-							<span class="comment-user-name"><%=image_tag(get_user(comment.user_id).picture, class: "profile-image-small")  %> <span class="commenter"><%= get_user(comment.user_id).name %></span>:</span>
-							<span class="comment-content"><%= comment.content %></span>
-						</p>
+				<section class="user-profile-section-small">
+					<%= image_tag(get_user(post.user_id).picture, class: "profile-image-small") %>
+				</section>
+				<section class="user-post-section-wide">
+					<h2><%= link_to post.title, city_post_path(@city, post.id)  %></h2>
+				  <span class="post-content"><span class="bold-name"><%=(get_user(post.user_id)).name %>: </span><%= post.content %></span>
+					<% comments = get_comments(post.id) %>
+					<% comments.each do |comment| %>
+						<div class="comment-content-wide">
+							<p class="comment">
+								<span class="comment-user-name"><%=image_tag(get_user(comment.user_id).picture, class: "profile-image-small")  %> <span class="commenter"><%= get_user(comment.user_id).name %></span>:</span>
+								<span class="comment-content"><%= comment.content %></span>
+							</p>
+						<% if current_user && current_user.id == comment.user_id %>
+						<div class="edit-cntr">
+							<%= link_to "", delete_comment_path(@city.id, post.id, comment.id), data: { confirm: 'Are you sure you want to delete this comment?' }, method: :delete, class: "glyphicon glyphicon-remove" %>
+							<%= link_to "", edit_city_post_comment_path(@city.id, post.id, comment.id), class: "glyphicon glyphicon-pencil" %>
+						</div>
+						<% end %>
 					</div>
-
-					<% if current_user && current_user.id == comment.user_id %>
-						<%= link_to "Delete", delete_comment_path(@city.id, post.id, comment.id), data: { confirm: 'Are you sure you want to delete this comment?' }, method: :delete, class: "btn btn-danger" %>
-						<%= link_to "Edit", edit_city_post_comment_path(@city.id, post.id, comment.id), class: "btn btn-primary" %>
 					<% end %>
-				<% end %>
-			</section>
+			    </section>
+			</div>
+			<%= link_to "Comment", city_post_path(@city, post.id), class: "btn btn-primary bottom-margin"  %>
+		<% end %>
 		</div>
-		<%= link_to "Comment", city_post_path(@city, post.id), class: "btn btn-primary bottom-margin"  %>
-	<% end %>
-</div>
+
 
 <!--New Post Modal-->
 <div id="new-post-modal" class="modal fade">

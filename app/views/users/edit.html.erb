@@ -1,7 +1,7 @@
 
 <section class="form-container">
 	<h1>Update <%= @user.name %></h1>
-		<%= form_for(@user,url: update_user_path) do |f| %>
+		<%= form_for(@user,url:user_path ,method: :put) do |f| %>
 		<div class="container-gray">
 			<div class="input-field">
 			  <%= f.text_field :name, placeholder: "Name", class: "form-control" %>

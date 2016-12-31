@@ -131,7 +131,7 @@ nav .wrap {
 .user-profile-section {
 	max-width: 300px;
 	font-size: 18px;
-	color: #222;
+	color: #000;
 	padding: 0;
 	margin: 20px 50px 0 0;
 	float: left;
@@ -142,13 +142,12 @@ nav .wrap {
 	color: #000;
 	padding: 0;
 	margin: 20px 0 0;
-	float: left;
 }
 .user-profile-section{
 	color:#fff;
 }
 .post-content {
-	color:#bdbdbd;
+	color:#212121;
 }
 /* cities index
 ************************************************/

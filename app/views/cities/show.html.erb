@@ -16,7 +16,7 @@
 				</section>
 				<section class="user-post-section-wide">
 					<h2><%= link_to post.title, city_post_path(@city, post.id)  %></h2>
-				  <span class="post-content"><span class="bold-name"><%=(get_user(post.user_id)).name %>: </span><%= post.content %></span>
+				  <p class="post-content"><span class="bold-name"><%=(get_user(post.user_id)).name %>: </span><%= post.content %></p>
 					<% comments = get_comments(post.id) %>
 					<% comments.each do |comment| %>
 						<div class="comment-content-wide">

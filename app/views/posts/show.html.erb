@@ -6,6 +6,7 @@
     <h2><%= get_user(@post.user_id).name %></h2>
     <p>Last seen: <%= get_user(@post.user_id).current_city %></p>
     <p>Joined: <%= get_user(@post.user_id).created_at.strftime("%d %b. %Y") %></p>
+    <%= link_to "Go Back", :back %>
   </section><!-- /user-profile-section -->
 
   <!-- Start User Post Section -->

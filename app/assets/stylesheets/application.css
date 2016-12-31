@@ -139,10 +139,13 @@ nav .wrap {
 
 .user-post-section {
 	min-width: 68%;
-	color: #222;
+	color: #000;
 	padding: 0;
 	margin: 20px 0 0;
 	float: left;
+}
+.user-profile-section{
+	color:#fff;
 }
 .post-content {
 	color:#bdbdbd;

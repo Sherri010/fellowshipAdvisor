@@ -10,12 +10,13 @@
 
 <div class="city-show-posts">
 	<%@posts.each do |post| %>
-		<div class="container-gray float-fix">
+		<div class="container-gray container-gray-1 float-fix">
 				<section class="user-profile-section-small">
 					<%= image_tag(get_user(post.user_id).picture, class: "profile-image-small") %>
 				</section>
 				<section class="user-post-section-wide">
 					<h2><%= link_to post.title, city_post_path(@city, post.id)  %></h2>
+					<span><%= post.created_at.strftime("%d %b. %Y")%></span>
 				  <p class="post-content"><span class="bold-name"><%=(get_user(post.user_id)).name %>: </span><%= post.content %></p>
 					<% comments = get_comments(post.id) %>
 					<% comments.each do |comment| %>
@@ -33,8 +34,8 @@
 					</div>
 					<% end %>
 			    </section>
+						<%= link_to "", city_post_path(@city, post.id), class: "glyphicon glyphicon-pencil"  %>
 			</div>
-			<%= link_to "Comment", city_post_path(@city, post.id), class: "btn btn-primary bottom-margin"  %>
 		<% end %>
 		</div>
 

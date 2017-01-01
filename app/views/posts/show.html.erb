@@ -1,29 +1,31 @@
 <div class="container">
-  <section class="user-profile-section">
-    <%= image_tag(get_user(@post.user_id).picture, class: "profile-image") %>
-    <h2><%= get_user(@post.user_id).name %></h2>
-    <p>Last seen: <%= get_user(@post.user_id).current_city %></p>
-    <p>Joined: <%= get_user(@post.user_id).created_at.strftime("%d %b. %Y") %></p>
-    <%= link_to "Go Back", :back %>
-  </section>
-  <section class="user-post-section">
-  <h2 class="post-title"><%= @post.title %></h2>
-  <span class="post-content"><%= @post.content %></span>
-  <% @comments.each do |comment| %>
-    <p class="comment">
-      <span class="comment-user-name"><%= get_user(comment.user_id).name %> :</span>
-      <span class="comment-content"><%= comment.content %></span>
-    </p>
-  <% end %>
-    <%= form_for([@city, @post, @comment_new], url: city_post_comments_path(@city.id, @post.id), method: "post") do |f| %>
-        <div class="container-gray">
-          <div class="input-field">
-            <%= f.text_field :content, placeholder: "Enter comment", class: "form-control" %>
-          </div>
-          <div class="submit-field">
-            <%= f.submit "Comment", class: "btn btn-primary" %>
-          </div>
-        </div>
+  <div class="row">
+    <div class="user-profile-section col-md-3">
+      <%= image_tag(get_user(@post.user_id).picture, class: "profile-image") %>
+      <h2><%= get_user(@post.user_id).name %></h2>
+      <p>Last seen: <%= get_user(@post.user_id).current_city %></p>
+      <p>Joined: <%= get_user(@post.user_id).created_at.strftime("%d %b. %Y") %></p>
+      <%= link_to "Go Back to the city", city_path(@city.id) %>
+    </div>
+    <div class="user-post-section col-offset-md-2 col-md-7">
+    <h2 class="post-title"><%= @post.title %></h2>
+    <span class="post-content"><%= @post.content %></span>
+    <% @comments.each do |comment| %>
+      <p class="comment">
+        <span class="comment-user-name"><%= get_user(comment.user_id).name %> :</span>
+        <span class="comment-content"><%= comment.content %></span>
+      </p>
     <% end %>
-  </section>
+      <%= form_for([@city, @post, @comment_new], url: city_post_comments_path(@city.id, @post.id), method: "post") do |f| %>
+          <div class="container-gray">
+            <div class="input-field">
+              <%= f.text_field :content, placeholder: "Enter comment", class: "form-control" %>
+            </div>
+            <div class="submit-field">
+              <%= f.submit "Comment", class: "btn btn-primary" %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
 </div>

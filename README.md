@@ -10,10 +10,13 @@
  - Bootstrap
  - Ruby on Rails
  - PostgreSQL
- - FriendlyID
+ - friendly_id
  
+#### Development Period:
+  3 days 
 #### Wireframes:
  ![](wireframes.png)
  
- 
+#### Data Models:
+![](fellow.jpg) 
 

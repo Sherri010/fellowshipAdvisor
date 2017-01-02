@@ -23,5 +23,6 @@ platform to write about your travelling experiences and share with everyone :)
 #### Data Models:
 ![](fellow.jpg) 
 
-did I mention this was my first ever rails app?
+did I mention this was my first ever rails app? 
+
 ![](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)

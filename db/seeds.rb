@@ -11,27 +11,27 @@ cities = City.create([
   {
     name: "The Shire",
     country: "Eriador",
-    picture: "http://i.imgur.com/vDwV7Sz.jpg"
+    picture: "https://i.imgur.com/vDwV7Sz.jpg"
   },
   {
     name: "Rivendell",
     country: "Eriador",
-    picture: "http://i.imgur.com/HnzRkEN.jpg"
+    picture: "https://i.imgur.com/HnzRkEN.jpg"
   },
   {
     name: "Isengard",
     country: "Rohan",
-    picture: "http://i.imgur.com/IBTYK7R.jpg"
+    picture: "https://i.imgur.com/IBTYK7R.jpg"
   },
   {
     name: "Helm's Deep",
     country: "Rohan",
-    picture: "http://i.imgur.com/bPxebsL.png"
+    picture: "https://i.imgur.com/bPxebsL.png"
   },
   {
     name: "Mount Doom",
     country: "Mordor",
-    picture: "http://i.imgur.com/FlgkWAX.png"
+    picture: "https://i.imgur.com/FlgkWAX.png"
   },
   {
     name: "Shelob's Lair",
@@ -52,14 +52,14 @@ users = User.create([
     current_city: "Rivendell",
     email: "aragorn@apple.com",
     password: "123",
-    picture: "http://vignette3.wikia.nocookie.net/lotr/images/0/09/Aragorn_3.jpg/revision/latest?cb=20100617184918"
+    picture: "https://vignette3.wikia.nocookie.net/lotr/images/0/09/Aragorn_3.jpg/revision/latest?cb=20100617184918"
   },
   {
     name: "Arwen",
     current_city: "Rivendell",
     email: "arwen@jezebel.com",
     password: "123",
-    picture: "http://vignette4.wikia.nocookie.net/lotr/images/d/dd/100_beautiful_arwen.jpg/revision/latest?cb=20110313201140"
+    picture: "https://vignette4.wikia.nocookie.net/lotr/images/d/dd/100_beautiful_arwen.jpg/revision/latest?cb=20110313201140"
   },
   {
     name: "Gollum",
@@ -73,7 +73,7 @@ users = User.create([
     current_city: "Mount Doom",
     email: "sauron@evil.com",
     password: "123",
-    picture: "http://vignette2.wikia.nocookie.net/lotr/images/9/91/437px-Sauron_hi_res-1-.jpg/revision/latest?cb=20120506173055"
+    picture: "https://vignette2.wikia.nocookie.net/lotr/images/9/91/437px-Sauron_hi_res-1-.jpg/revision/latest?cb=20120506173055"
   },
   {
     name: "Pippin",
@@ -87,12 +87,12 @@ users = User.create([
     current_city: "The Shire",
     email: "gandalfthegrey@aol.com",
     password: "123",
-    picture: "http://www.bladecenter.com/images/products/detail/UC2926_1.jpg"
+    picture: "https://www.bladecenter.com/images/products/detail/UC2926_1.jpg"
   },
   {
     name: "Gandalf the White",
     current_city: "The Shire",
     email: "gandalfthewhite@aol.com",
     password: "123",
-    picture: "http://static.comicvine.com/uploads/original/11117/111173561/5051391-2794028225-17163.jpg"
+    picture: "https://static.comicvine.com/uploads/original/11117/111173561/5051391-2794028225-17163.jpg"
   }])

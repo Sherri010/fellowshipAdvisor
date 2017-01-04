@@ -1,4 +1,7 @@
 # FellowshipAdvisor
+
+platform to write about your travelling experiences and share with everyone :)
+
 #### contributers:
  - Natalia Hess       (nathess91)
  - Kenneth Bushman    (kbbushman)
@@ -10,10 +13,16 @@
  - Bootstrap
  - Ruby on Rails
  - PostgreSQL
- - FriendlyID
+ - friendly_id
  
+#### Development Period:
+  3 days 
 #### Wireframes:
  ![](wireframes.png)
  
- 
+#### Data Models:
+![](fellow.jpg) 
 
+did I mention this was my first ever rails app? 
+
+![](https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif)
